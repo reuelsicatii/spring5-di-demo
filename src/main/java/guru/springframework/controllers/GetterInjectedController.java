@@ -12,12 +12,13 @@ import org.springframework.stereotype.Controller;
 public class GetterInjectedController {
     private GreetingService greetingService;
 
-    public String sayHello(){
-        return greetingService.sayGreeting();
-    }
-
     @Autowired
     public void setGreetingService(@Qualifier("getterGreetingService") GreetingService greetingService) {
         this.greetingService = greetingService;
+    }
+    
+    public String sayHello(){
+    	System.out.println("\n =====Qualifier:Getter=====");
+        return greetingService.sayGreeting();
     }
 }

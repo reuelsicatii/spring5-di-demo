@@ -17,6 +17,7 @@ public class ConstructorInjectedController {
     }
 
     public String sayHello(){
+    	System.out.println("\n =====Qualifier:Constructor=====");
         return greetingService.sayGreeting();
     }
 }
