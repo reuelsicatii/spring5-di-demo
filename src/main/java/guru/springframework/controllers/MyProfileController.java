@@ -9,14 +9,14 @@ import org.springframework.stereotype.Controller;
  * Created by jt on 5/23/17.
  */
 @Controller
-public class MyPrimaryController {
+public class MyProfileController {
 
 	@Autowired
     private GreetingService greetingService;
 
 
     public String sayHello(){
-    	System.out.println("\n =====Primary=====");
+    	System.out.println("\n =====Profile=====");
         return greetingService.sayGreeting();
     }
 }
